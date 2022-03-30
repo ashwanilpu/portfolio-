@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 20px;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  /* scroll-snap-type: y mandatory;
+  overflow-y: scroll; */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.nav {
+  position: fixed !important;
+  background-color: #212121;
+  width: 0px;
+  transition: all 0.5s;
+  height: 100%;
+  z-index: 1;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+  display: block;
+  font-size: 24px;
+  user-select: none;
+  margin: 20px;
+  position: fixed;
+  cursor: pointer;
+}
+
+.cross {
+  display: none;
+  user-select: none;
+  font-size: 24px;
+  margin: 10px;
+  cursor: pointer;
+}
+.nav_container {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nav_container .logo {
+  margin: 15px;
+  font-weight: bold;
+  font-size: 30px;
+  color: #1db954;
+  display: none;
+  justify-content: space-between;
+  align-items: baseline;
+}
+ul {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ul li {
+  margin-bottom: 50px;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+ul li:hover {
+  background-color: #1db954;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+
+.section {
+  /* scroll-snap-align: start; */
+  width: 100vw;
+  height: 100vh;
+}
+
+.verticla_navbar {
+  display: flex;
+}
+.left_container {
+  margin-left: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.left_container a {
+  text-decoration: none;
+  color: black;
+}
+.icon {
+  font-size: 30px !important;
+  margin: 10px;
+  cursor: pointer;
+}
+.fa-linkedin:hover {
+  color: #0072b1;
+}
+
+.fa-twitter:hover {
+  color: #26a7de;
+}
+
+.fa-github:hover {
+  color: #242121;
+}
+.right_container {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.divide {
+  flex: 50%;
+}
+.static_txt {
+  margin-right: 5px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.dynamic_txt {
+  position: relative;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.dynamic_txt::after {
+  content: "";
+  border-left: 2px solid black;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: typing 4s steps(15) infinite;
+  background-color: white;
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 10px);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+div.first {
+  display: flex;
+}
+
+.highlight_txt {
+  background-color: rgb(138, 224, 164);
+  font-size: 30px;
+}
+
+div.right_container .me_img {
+  width: 60%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 25px;
+  margin: 60px 0 0 100px;
+}
+
+div.right_container .me_img:hover {
+  animation: uptodown 1s forwards;
+}
+
+.para_txt {
+  font-size: 20px;
+  line-height: 40px;
+}
+
+div.right_container .man_img {
+  width: 80%;
+  object-fit: cover;
+  animation: righttoleft 1s forwards;
+}
+
+div.line {
+  width: 250px;
+  height: 5px;
+  background-color: black;
+  margin-top: 10px;
+}
+
+@keyframes righttoleft {
+  0% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes uptodown {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, -5%);
+    opacity: 0.7;
+  }
+}
+
+.skill_container {
+  margin-top: 20px;
+  display: flex;
+}
+
+.skill_container .skilllogo_container {
+  display: flex;
+  align-items: center;
+  border: 1px solid;
+  width: 200px;
+  height: 36px;
+  justify-content: space-evenly;
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.heading {
+  margin-left: 100px;
+}
+.pro_container {
+  display: flex;
+  margin-bottom: 30px;
+}
+.proleft_container {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  justify-content: space-around;
+  margin: 40px 0px 40px 100px;
+}
+.proright_container {
+  display: flex;
+  flex-direction: column;
+
+  width: 500px;
+  justify-content: space-around;
+  margin: 40px;
+}
+.pro_img {
+  object-fit: cover;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.pro_img:hover {
+  animation: uptodown 1s forwards;
+}
+.protech_txt {
+  font-weight: bold;
+  font-size: 20px;
+}
+.code_container {
+  display: flex;
+  align-items: center;
+}
+.code_container a {
+  text-decoration: none;
+  color: black;
+}
+
+.fotter {
+  height: 200px;
+  background-color: black;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.fotter a {
+  text-decoration: none;
+  color: white;
+}
+
+.last {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="checkbox"]:checked ~ .nav {
+  width: 250px;
+}
+input[type="checkbox"]:checked ~ .hamburger {
+  display: none;
+}
+input[type="checkbox"]:checked ~ .nav .cross {
+  display: block;
+}
+input[type="checkbox"]:checked ~ .nav .logo {
+  display: flex;
+}
+
+input[type="checkbox"]:checked ~ .nav .nav_container ul {
+  display: flex;
+}
+
+/* for tablets */
+@media (max-width: 768px) {
+  .static_txt {
+    font-size: 25px;
+  }
+  .dynamic_txt {
+    font-size: 25px;
+  }
+
+  .highlight_txt {
+    font-size: 25px;
+  }
+  body {
+    font-size: 15px;
+  }
+  .me_img {
+    display: none;
+  }
+  .protech_txt {
+    font-size: 15px;
+  }
+  .para_txt {
+    font-size: 15px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left_container {
+    margin-left: 40px;
+  }
+  .first {
+    flex-direction: column;
+  }
+  .pro_container {
+    flex-direction: column;
+  }
+  .proleft_container {
+    margin-left: 40px;
+    width: 250px;
+  }
+  .proright_container {
+    margin-left: 40px;
+    width: 250px;
+  }
+
+  .protech_txt {
+    font-size: 12px;
+  }
+  .para_txt {
+    font-size: 12px;
+    line-height: 30px;
+  }
+
+  .heading {
+    margin-left: 40px;
+  }
+  .first {
+    margin-top: 30px;
+  }
+  .skill_txt {
+    display: none;
+  }
+  .hamburger {
+    position: relative;
+  }
+}
